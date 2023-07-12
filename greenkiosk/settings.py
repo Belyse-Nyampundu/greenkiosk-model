@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'notification',
     'vendor',
     'payment',
+    'shipment',
 ]
 
 MIDDLEWARE = [
