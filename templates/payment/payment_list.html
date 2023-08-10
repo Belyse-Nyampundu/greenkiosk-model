@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- {%load static%} -->
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+</head>
+<body>
+    <h2>Payments</h2>
+    <table>
+        <thead>
+            <th>Products</th>
+            <th>Payment method</th>
+            <th>Payment amount</th>
+        </thead>
+
+        {% for payment in payment %}
+        <tbody>
+            <td>{{payment.products}}</td>
+            <td>{{payment.payment_method}}</td>
+            <td>{{payment.payment_amount}}</td>
+        </tbody>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

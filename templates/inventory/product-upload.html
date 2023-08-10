@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Product Upload Form</h3>
+    
+    <form method="POST",class= "uplod-form" enctype="multipart/form-data"> 
+        {% csrf_token%}       <!-- the purpose of this token it's to protect from hackers  it is very important when you upload to a cloud-->
+    
+        {{form.as_p}}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
